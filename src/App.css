@@ -2,9 +2,6 @@
   text-align: center;
 }
 
-
-
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -16,8 +13,22 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav {
+  margin: 20px;
+}
+
+nav button {
+  background-color: #61dafb;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #4fa3d2;
 }
 
 .Movie-container {
@@ -27,40 +38,45 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-
 }
-
 
 .Movie-wrapper {
-  width: 500px;
+  width: 250px;
   background-color: antiquewhite;
   color: black;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.Movie-search {
-  height: 48px;
-  font-size: 24px;
-  margin-bottom: 32px;
-  padding: 16px;
-  font-weight: bold;
-  width: 475px;
+.Movie-image {
+  width: 100%;
+  border-radius: 5px;
 }
 
 .Movie-title {
   height: 60px;
-  margin-top: 26px;
   font-weight: bold;
 }
 
-.Movie-date {
-  margin-top: 26px;
+.Movie-date, .Movie-rate {
+  margin-top: 10px;
   font-style: italic;
 }
 
 .Movie-rate {
   color: gold;
-  margin-bottom: 24px;
   font-weight: bold;
-  font-size: 1.2em;
-  
+}
+
+@media (max-width: 768px) {
+  .Movie-wrapper {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .Movie-search {
+    width: 90%;
+    font-size: 18px;
+  }
 }
